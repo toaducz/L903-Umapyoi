@@ -51,5 +51,7 @@ export const getCharacterDetail = ({ id }: UmaDetailRequest) => {
     queryKey: ['get-characters-detail', id],
     queryFn: () =>
       request<UmaDetail>(`/api/v1/character/${id}`, 'GET'),
+    retry: 2,
   });
 };
+

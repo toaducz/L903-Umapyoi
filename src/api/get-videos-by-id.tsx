@@ -15,6 +15,7 @@ export const getCharacterMovies = ({ id }: UmaMoviesRequest) => {
   return queryOptions({
     queryKey: ['get-characters-movies', id],
     queryFn: () =>
-      request<LabelValue>(`/api/v1/character/movies/${id}`, 'GET'),
+      request<LabelValue[]>(`/api/v1/character/movies/${id}`, 'GET'),
+    retry: 1
   });
 };

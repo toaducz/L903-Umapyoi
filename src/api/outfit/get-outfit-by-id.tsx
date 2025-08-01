@@ -24,5 +24,6 @@ export const getCharacterImages = ({ id }: UmaImagesRequest) => {
     queryKey: ['get-characters-images', id],
     queryFn: () =>
       request<CharacterOutfitList>(`/api/v1/character/images/${id}`, 'GET'),
+    retry: 2,
   });
 };
