@@ -20,6 +20,11 @@ export default function CharacterCard({ character }: Readonly<Props>) {
             className="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-110"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          {/* Hover overlay với character info */}
+          <div className="absolute inset-0 bg-gray-900/80 dark:bg-gray-900/90 text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center rounded-xl">
+            <p className="text-sm">Main Color: <span style={{ color: character.color_main }}>{character.color_main}</span></p>
+            <p className="text-sm">Sub Color: <span style={{ color: character.color_sub }}>{character.color_sub}</span></p>
+          </div>
         </div>
         <div className="mt-3 text-center">
           <p className="font-bold text-lg text-pink-600 dark:text-pink-400 transition-colors duration-300 group-hover:text-pink-500">
@@ -28,7 +33,7 @@ export default function CharacterCard({ character }: Readonly<Props>) {
           <p className="text-sm text-gray-500 dark:text-gray-400 italic">{character.name_jp}</p>
         </div>
         <div className="absolute top-2 right-2 bg-pink-500 text-white text-xs font-semibold px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          View
+          Xem thêm
         </div>
       </div>
     </Link>

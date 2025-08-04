@@ -3,6 +3,8 @@ import { Geist, Geist_Mono, Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import QueryProvider from '@/app/provider';
 import Navbar from "@/components/navbar/navbar";
+import NProgressInit from '@/components/NProgressInit'
+import { Suspense } from 'react'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,6 +38,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${notoSansJP.variable} antialiased`}
       >
         <QueryProvider>
+          <Suspense>
+            {' '}
+            <NProgressInit />
+          </Suspense>
           <Navbar />
           <main className="min-h-screen bg-gradient-to-b from-pink-100 via-purple-100 to-blue-100 dark:from-gray-900 dark:via-purple-900 dark:to-blue-900 pt-16">
             {children}
