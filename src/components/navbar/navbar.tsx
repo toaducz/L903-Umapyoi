@@ -29,29 +29,29 @@ export default function Navbar() {
         isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div className='max-w-7xl mx-auto px-4 py-4 flex items-center justify-between'>
         <Link
-          href="/"
-          className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 dark:from-pink-400 dark:to-purple-400 transition-transform duration-300 hover:scale-105 animate-[fade-in_0.8s_ease-out]"
+          href='/'
+          className='text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 dark:from-pink-400 dark:to-purple-400 transition-transform duration-300 hover:scale-105 animate-[fade-in_0.8s_ease-out]'
         >
           L903 Umapyoi
         </Link>
-        <div className="flex space-x-6">
+        <div className='flex space-x-6'>
           <Link
-            href="/music/0"
-            className="text-lg font-medium text-gray-800 dark:text-gray-200 hover:text-purple-500 dark:hover:text-purple-400 transition-colors duration-200"
+            href='/music/0'
+            className='text-lg font-medium text-gray-800 dark:text-gray-200 hover:text-purple-500 dark:hover:text-purple-400 transition-colors duration-200'
           >
             Âm nhạc
           </Link>
           <Link
-            href="/support-card"
-            className="text-lg font-medium text-gray-800 dark:text-gray-200 hover:text-purple-500 dark:hover:text-purple-400 transition-colors duration-200"
+            href='/support-card'
+            className='text-lg font-medium text-gray-800 dark:text-gray-200 hover:text-purple-500 dark:hover:text-purple-400 transition-colors duration-200'
           >
             Support Card
           </Link>
           <Link
-            href="/news"
-            className="text-lg font-medium text-gray-800 dark:text-gray-200 hover:text-purple-500 dark:hover:text-purple-400 transition-colors duration-200"
+            href='/news'
+            className='text-lg font-medium text-gray-800 dark:text-gray-200 hover:text-purple-500 dark:hover:text-purple-400 transition-colors duration-200'
           >
             Tin tức
           </Link>
