@@ -41,6 +41,6 @@ export const getMusicAlbums = ({ page }: { page: number }) => {
   return queryOptions({
     queryKey: ['get-music-albums', page],
     queryFn: () => request<Album[]>(`/api/v1/music/min/albums/${page}`, 'GET'),
-    retry: false // hoặc retry: 1 nếu bạn muốn thử lại 1 lần duy nhất
+    retry: false
   })
 }

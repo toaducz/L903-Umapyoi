@@ -1,7 +1,7 @@
 import { request } from '@/utils/request'
 import { queryOptions } from '@tanstack/react-query'
 
-export interface Album {
+export type Album = {
   album_art: string
   apple_music_id: string
   cystore_product_id: string | null
@@ -27,7 +27,7 @@ export interface Singer {
   vgmdb_id: number
 }
 
-export interface Track {
+export type Track = {
   _albums: Album[]
   _singers: Singer[]
   id: number
@@ -51,9 +51,8 @@ export const getFilteredMusicTracks = ({ song, character }: GetFilteredMusicTrac
   return queryOptions({
     queryKey: ['get-filtered-music-tracks', song, character],
     queryFn: () =>
-      request<Track[]>(`/api/v1/music/filter`, 'GET', {
-        song,
-        ...(character ? { character } : {})
+      request<MusicData[]>(`/api/v1/music/filter`, 'GET', {
+        song: song  
       }),
     retry: false
   })
